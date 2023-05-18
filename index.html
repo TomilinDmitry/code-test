@@ -23,6 +23,24 @@
                 <input class="search_input" name='search' type="text" placeholder="Введите имя,тег,почту...">
                 <i class="fa-solid fa-filter"></i>
             </form>
+            <!-- Filter -->
+            <div class="filter_container">
+                <div class="filter_text">
+                    <h2>Сортировка</h2>
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <form action="">
+                    <div class="filter_choice_alphabet">
+                        <input class='check' name='check' type="radio">
+                        <span> По алфавиту</span>
+                    </div>
+                    <div class="filter_choice_birthday">
+                        <input class='check' name='check' type="radio">
+                        <span> По дню рождения</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Filter -->
         </div>
     </header>
     <nav>
@@ -38,13 +56,22 @@
         </div>
     </nav>
 
-    <!-- <main>
-        <div class="main_container">
+    <main>
+        <div class="main_container none">
             <div class="critical_error">
                 <img src="error_photo.svg" alt="" srcset="">
             </div>
+            <div class="error_title">
+                <h3>Какой-то сверхразум все сломал</h3>
+            </div>
+            <div class="error_subtitle">
+                <span>Постараемся быстро починить</span>
+            </div>
+            <div class="try_again">
+                <span><a href="#">Попробовать снова</a></span>
+            </div>
         </div>
-    </main> -->
+    </main>
 </body>
 
 </html>
