@@ -21,11 +21,13 @@ filter.addEventListener('click', () => {
     filterMenu.style.display = 'flex';
     filterMenu.style.background = '#fff';
     body.style.background = '#b4b4b4'
+    searchInput.setAttribute('readonly', 'readonly')
 
 })
 closeBtn.addEventListener('click', () => {
     filterMenu.style.display = 'none'
     body.style.background = '#fff'
+    searchInput.removeAttribute('readonly')
 })
 
 // Ошибка
