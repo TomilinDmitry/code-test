@@ -9,7 +9,7 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-
+    font-family: 'Inter', sans-serif;
 }
 
 /* Header */
@@ -32,12 +32,13 @@ body {
 
 .search_input {
     padding: 0.5rem 2.5rem;
-    width: 95%;
+    width: 90%;
     position: absolute;
     border: none;
     opacity: 0.5;
     font-size: 1rem;
     font-weight: 500;
+    border-radius: 10px
 }
 
 .search_input:focus {
@@ -53,12 +54,12 @@ body {
     cursor: pointer;
 }
 
-.fa-filter {
+.filter_btn {
     position: relative;
     z-index: 1;
     opacity: 0.3;
-    top: 0.5rem;
-    left: 98%;
+    bottom: 0.7rem;
+    left: 90%;
     cursor: pointer;
 }
 
@@ -86,6 +87,10 @@ body {
 
 }
 
+.list {
+    padding: 5px 10px
+}
+
 /* Nav */
 
 /* Filter */
@@ -100,9 +105,8 @@ body {
     position: absolute;
     width: 373px;
     height: 192px;
-    left: calc(50% - 373px/2 + 0.5px);
-    top: calc(50% - 192px/2);
-
+    top: 50%;
+    left: 35%;
 }
 
 .filter_text {
@@ -115,32 +119,32 @@ body {
     top: 20px;
 }
 
-.filter_text i {
+/* Кнопка  X */
+.fa-x {
     position: relative;
-    top: -10px;
-    left: 80px;
+    top: 10px;
+    left: 40px;
     color: #C3C3C6;
     cursor: pointer;
 }
 
+/* Кнопка  X */
+
 .filter_container form {
     display: flex;
-    position: relative;
-    top: 20px;
-    left: 20px;
     flex-direction: column;
-    align-items: center;
+    margin-top: 3rem;
+    justify-content: center;
     gap: 2rem;
-}
 
-
-
-.filter_choice span {
-    font-size: 1rem;
-    font-weight: 500;
 }
 
 .filter_choice_birthday {
+    position: relative;
+    left: 17px;
+}
+
+.filter_choice_alphabet {
     position: relative;
     left: 17px;
 }
@@ -173,4 +177,54 @@ body {
     text-decoration: none;
     color: #6534FF;
     font-weight: 600;
+}
+
+
+/* Media */
+
+@media screen and (max-width:600px) {
+    .filter_container {
+        top: 25%;
+        left: 30%;
+    }
+
+    .filter_list {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .filter_list {
+        gap: 0.7rem;
+
+    }
+
+    .filter_container {
+        top: 55%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .filter_container {
+        width: 300px;
+        height: 192px;
+        top: 67%
+    }
+
+    .fa-x {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .filter_container {
+        width: 250px;
+        height: 192px;
+        top: 70%
+    }
+
+    .fa-x {
+        left: 10px;
+    }
 }
